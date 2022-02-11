@@ -15,6 +15,9 @@ CREATE DATABASE IF NOT EXISTS boo;
 # DB auswählen
 #USE boo;
 
+# DB boo löschen, falls vorhanden
+DROP TABLE IF EXISTS boo.test;
+
 # Tabelle anzeigen, falls noch nicht vorhanden
 CREATE TABLE IF NOT EXISTS boo.test
 (
