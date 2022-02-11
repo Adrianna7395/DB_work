@@ -1,1 +1,2 @@
 source 02 SQL Tables/02_db_table_SQL.sql
+source 02 SQL Tables/02a_db_table_SQL.sql

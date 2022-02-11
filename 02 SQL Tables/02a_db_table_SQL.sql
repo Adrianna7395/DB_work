@@ -13,10 +13,10 @@ DROP DATABASE IF EXISTS boo;
 CREATE DATABASE IF NOT EXISTS boo;
 
 # DB auswählen
-USE boo;
+#USE boo;
 
 # Tabelle anzeigen, falls noch nicht vorhanden
-CREATE TABLE IF NOT EXISTS test
+CREATE TABLE IF NOT EXISTS boo.test
 (
 	name VARCHAR(20),
 	age INT 
@@ -29,12 +29,12 @@ CREATE TABLE IF NOT EXISTS test
 SHOW TABLES;
 
 # Struktur der Tabelle anzeigen
-DESCRIBE test;
+DESCRIBE boo.test;
 
 # Datenbanken
-INSERT INTO test(name,age) VALUES ("Grizabella", 29);
-INSERT INTO test(name,age) VALUES (35, "Alonzo");
-INSERT INTO test VALUES ();
+INSERT INTO boo.test(name,age) VALUES ("Grizabella",29);
+INSERT INTO boo.test(age,name) VALUES (35,"Alonzo");
+INSERT INTO boo.test VALUES ();
 
 # Inhalte der Tabelle anzeigen 
-SELECT * FROM test;
+SELECT * FROM boo.test;

@@ -33,7 +33,7 @@ DESCRIBE test;
 
 # Datenbanken
 INSERT INTO test(name,age) VALUES ("Grizabella", 29);
-INSERT INTO test(name,age) VALUES (35, "Alonzo");
+INSERT INTO test(age,name) VALUES (35, "Alonzo");
 INSERT INTO test VALUES ();
 
 # Inhalte der Tabelle anzeigen 
