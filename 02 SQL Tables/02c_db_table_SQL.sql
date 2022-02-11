@@ -16,12 +16,13 @@ CREATE DATABASE IF NOT EXISTS boo;
 #USE boo;
 
 # DB boo löschen, falls vorhanden
-DROP TABLE IF EXISTS boo.test;
+#DROP TABLE IF EXISTS boo.test;
 
 # Tabelle anzeigen, falls noch nicht vorhanden
 CREATE TABLE IF NOT EXISTS boo.test
 (
-	name VARCHAR(20) NOT NULL UNIQUE DEFAULT "TBA",
+    id INT NOT NULL UNIQUE,
+	name VARCHAR(20) NOT NULL DEFAULT "TBA",
 	age INT NOT NULL DEFAULT 0
 
 
@@ -35,12 +36,13 @@ SHOW TABLES;
 DESCRIBE boo.test;
 
 # Datenbanken
-INSERT INTO boo.test(name,age) VALUES ("Grizabella",29);
-INSERT INTO boo.test(age,name) VALUES (35,"Alonzo");
-INSERT INTO boo.test VALUES ();
+INSERT INTO boo.test(id,name,age) VALUES (1,"Grizabella",29);
+INSERT INTO boo.test(id,name,age) VALUES (2,"Alonzo",35);
+INSERT INTO boo.test(id,name,age) VALUES (3,"Alonzo",31);
+INSERT INTO boo.test(id,name,age) VALUES (4,"Alonzo",25);
 
 # Doppelte Daten werden zugelassen
-INSERT INTO boo.test(age,name) VALUES (35,"Alonzo, der Coole!");
+#INSERT INTO boo.test(age,name) VALUES (35,"Alonzo");
 
 # Inhalte der Tabelle anzeigen 
 SELECT * FROM boo.test;
